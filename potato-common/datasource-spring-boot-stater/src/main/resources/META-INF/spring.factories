@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.potato.datasource.DynamicDataSourceAutoConfigure,\
+com.potato.datasource.DynamicDataSourceAspectAutoConfig,\
+com.potato.datasource.DynamicDataSourceBaseAutoConfig
