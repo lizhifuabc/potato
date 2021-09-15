@@ -14,5 +14,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>datasource-spring-boot-stater-test</module>
+        <module>potato-api-core-test</module>
     </modules>
 </project>
