@@ -6,6 +6,7 @@
     <modules>
         <module>potato-common</module>
 		<module>potato-test</module>
+		<module>potato-api</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
