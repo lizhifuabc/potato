@@ -1,8 +1,6 @@
 package com.api.gen.mapper;
 
 import com.api.gen.entity.TableColumns;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -12,8 +10,6 @@ import java.util.List;
  * @author lizhifu
  * @date 2021/9/16
  */
-@Component
-@Mapper
 public interface GeneratorMapper {
     /**
      * 根据表名查询字段

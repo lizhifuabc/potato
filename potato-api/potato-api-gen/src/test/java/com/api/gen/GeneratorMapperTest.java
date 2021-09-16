@@ -1,10 +1,12 @@
 package com.api.gen;
 
+import com.api.gen.entity.TableColumns;
 import com.api.gen.mapper.GeneratorMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * GeneratorMapper测试
@@ -18,6 +20,7 @@ public class GeneratorMapperTest {
     private GeneratorMapper generatorMapper;
     @Test
     public void selectColumns(){
-        generatorMapper.selectColumns("base_datasource");
+        List<TableColumns> list = generatorMapper.selectColumns("base_datasource");
+        System.out.println(list);
     }
 }
