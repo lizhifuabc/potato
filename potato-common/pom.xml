@@ -15,6 +15,7 @@
         <module>redis-spring-boot-stater</module>
         <module>datasource-spring-boot-stater</module>
         <module>potato-api-core</module>
+        <module>feign-spring-boot-stater</module>
     </modules>
     <packaging>pom</packaging>
 </project>
