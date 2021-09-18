@@ -7,6 +7,8 @@
         <module>potato-common</module>
 		<module>potato-test</module>
 		<module>potato-api</module>
+        <module>potato-gateway</module>
+		<module>potato-config</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -25,6 +27,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<spring-boot-dependencies.version>2.5.4</spring-boot-dependencies.version>
+		<spring-cloud.version>2020.0.3</spring-cloud.version>
+		<spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
 		<redisson.version>3.16.1</redisson.version>
 		<mybatis.version>2.2.0</mybatis.version>
 		<velocity.version>1.7</velocity.version>
@@ -52,6 +56,24 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- SpringCloud 微服务 -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- SpringCloud Alibaba 微服务 -->
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>${spring-cloud-alibaba.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
 			<!--	redisson		-->
 			<dependency>
 				<groupId>org.redisson</groupId>
