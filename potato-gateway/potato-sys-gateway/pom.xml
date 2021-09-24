@@ -10,28 +10,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>potato-sys-gateway</artifactId>
-
+    <packaging>jar</packaging>
+    <description>potato 服务网关</description>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <!-- SpringCloud Gateway -->
+        <!-- SpringCloud Gateway 内置webflux -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-        <!--  nacos      -->
+        <!--  nacos 注册中心客户端  -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!-- nacos配置中心       -->
+        <!-- nacos 配置中心客户端 -->
         <dependency>
-            <groupId>com.potato</groupId>
-            <artifactId>potato-config</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
     </dependencies>
 </project>

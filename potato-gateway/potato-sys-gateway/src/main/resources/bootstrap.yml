@@ -1,0 +1,27 @@
+# Tomcat
+server:
+  port: 9000
+
+# Spring
+spring: 
+  application:
+    # 应用名称
+    name: potato-sys-gateway
+  profiles:
+    # 环境配置
+    active: @profiles.active@
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: server.addr.com:8848
+      config:
+        # 配置中心地址
+        server-addr: config.addr.com:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
