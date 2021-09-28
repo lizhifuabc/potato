@@ -15,5 +15,6 @@
     <modules>
         <module>datasource-spring-boot-stater-test</module>
         <module>potato-api-core-test</module>
+        <module>auth-spring-boot-stater-test</module>
     </modules>
 </project>

@@ -16,6 +16,8 @@
         <module>datasource-spring-boot-stater</module>
         <module>potato-api-core</module>
         <module>feign-spring-boot-stater</module>
+        <module>auth-spring-boot-stater</module>
+        <module>potato-common-core</module>
     </modules>
     <packaging>pom</packaging>
 </project>

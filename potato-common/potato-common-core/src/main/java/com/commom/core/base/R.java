@@ -1,4 +1,4 @@
-package com.potato.core.base;
+package com.commom.core.base;
 
 import lombok.Data;
 

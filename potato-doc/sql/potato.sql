@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS potato_config DEFAULT CHARACTER SET = utf8;
+Use potato_config;
 -- ----------------------------
 -- 数据源
 -- ----------------------------
@@ -11,4 +13,4 @@ create table base_datasource (
     primary key (datasource_id)
 ) engine=innodb auto_increment=200 comment = '数据源';
 
-INSERT INTO potato.base_datasource (datasource_id, datasource_name, user_name, password, url) VALUES (200, '默认', 'yfyf_dev', 'T%F4eoBPQu3Ne', 'jdbc:mysql://rm-2zeochgmp1srpq166.mysql.rds.aliyuncs.com:3306/xi?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8');
+INSERT INTO potato_config.base_datasource (datasource_id, datasource_name, user_name, password, url) VALUES (200, '默认', 'yfyf_dev', 'T%F4eoBPQu3Ne', 'jdbc:mysql://rm-2zeochgmp1srpq166.mysql.rds.aliyuncs.com:3306/xi?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8');

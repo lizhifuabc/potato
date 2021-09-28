@@ -1,6 +1,4 @@
-package com.potato.core.base;
-
-import org.springframework.http.HttpStatus;
+package com.commom.core.base;
 
 /**
  * 返回码
@@ -9,10 +7,12 @@ import org.springframework.http.HttpStatus;
  * @date 2021/9/14
  */
 public enum ReturnCode {
-    SYSTEM_ERROR(HttpStatus.SERVICE_UNAVAILABLE.value(), "服务器错误"),
-    PARAM_ERROR(HttpStatus.BAD_REQUEST.value(), "参数错误"),
-    SUCCESS(HttpStatus.OK.value(), "成功"),
-    NOT_FOUND(HttpStatus.NOT_FOUND.value(),"URL不存在");
+    SYSTEM_ERROR(503, "服务器错误"),
+    PARAM_ERROR(400, "参数错误"),
+    SUCCESS(200, "成功"),
+    UNAUTHORIZED(401, "未授权"),
+    NOT_FOUND(404,"URL不存在");
+
     /** 枚举值 */
     private final Integer code;
     /** 枚举描述 */

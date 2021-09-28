@@ -1,6 +1,6 @@
 package com.potato.core.demo;
 
-import com.potato.core.base.R;
+import com.commom.core.base.R;
 import com.potato.core.demo.entity.Demo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

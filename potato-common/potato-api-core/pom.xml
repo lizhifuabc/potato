@@ -36,6 +36,10 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.potato</groupId>
+            <artifactId>potato-common-core</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

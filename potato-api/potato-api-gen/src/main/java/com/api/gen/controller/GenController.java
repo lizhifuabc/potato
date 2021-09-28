@@ -1,6 +1,6 @@
 package com.api.gen.controller;
 
-import com.potato.core.base.R;
+import com.commom.core.base.R;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

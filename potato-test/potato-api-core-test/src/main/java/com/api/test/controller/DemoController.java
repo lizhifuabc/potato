@@ -1,8 +1,8 @@
 package com.api.test.controller;
 
 import com.potato.core.annotation.ApiVersion;
-import com.potato.core.base.R;
-import com.potato.core.base.ReturnCode;
+import com.commom.core.base.R;
+import com.commom.core.base.ReturnCode;
 import com.potato.core.exception.CustomException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

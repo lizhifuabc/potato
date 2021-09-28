@@ -9,6 +9,8 @@
 		<module>potato-api</module>
         <module>potato-gateway</module>
 		<module>potato-config</module>
+        <module>potato-register</module>
+		<module>potato-auth</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,11 +29,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<spring-boot-dependencies.version>2.5.4</spring-boot-dependencies.version>
-		<spring-cloud.version>2020.0.3</spring-cloud.version>
+		<spring-cloud.version>2020.0.4</spring-cloud.version>
 		<spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
 		<redisson.version>3.16.1</redisson.version>
 		<mybatis.version>2.2.0</mybatis.version>
 		<velocity.version>1.7</velocity.version>
+		<spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
+		<commons-io.version>2.7</commons-io.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,7 +43,6 @@
 			<artifactId>spring-boot-dependencies</artifactId>
 			<version>${spring-boot-dependencies.version}</version>
 			<type>pom</type>
-			<scope>import</scope>
 		</dependency>
 		<!--	lombok	-->
 		<dependency>
@@ -52,10 +55,38 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- bootstrap 启动器：手动添加bootstrap依赖 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- 自定义 starter start-->
+			<dependency>
+				<groupId>com.potato</groupId>
+				<artifactId>potato-common-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.potato</groupId>
+				<artifactId>auth-spring-boot-stater</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.potato</groupId>
+				<artifactId>redis-spring-boot-stater</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.potato</groupId>
+				<artifactId>datasource-spring-boot-stater</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 自定义 starter end-->
+
 			<!-- SpringCloud 微服务 -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -98,10 +129,32 @@
 				<artifactId>velocity</artifactId>
 				<version>${velocity.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-oauth2</artifactId>
+				<version>${spring-cloud-starter-oauth2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+
+
 		</dependencies>
 	</dependencyManagement>
 
 	<build>
+		<!--build节点增加内容-->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<!--开启过滤，用指定的参数替换directory下的文件中的参数-->
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -124,5 +177,17 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<!-- 环境标识 -->
+				<profiles.active>dev</profiles.active>
+			</properties>
+			<activation>
+				<!-- 默认标识 -->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
 </project>
