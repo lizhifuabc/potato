@@ -1,22 +1,23 @@
-package com.potato.auth;
+package com.potato.sys;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
- * 授权认证中心
- *
+ * 系统模块
+ * 
  * @author lizhifu
- * @date 2021/9/16
  */
-@SpringBootApplication
 @EnableFeignClients(basePackages = "com.potato")
-@EnableDiscoveryClient
-public class PotatoAuthApplication {
+// 开启线程异步执行
+@EnableAsync
+@SpringBootApplication
+public class PotatoSysApplication
+{
     public static void main(String[] args)
     {
-        SpringApplication.run(PotatoAuthApplication.class, args);
+        SpringApplication.run(PotatoSysApplication.class, args);
     }
 }

@@ -46,6 +46,10 @@
             <groupId>com.potato</groupId>
             <artifactId>datasource-spring-boot-stater</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.potato</groupId>
+            <artifactId>potato-api-sys</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

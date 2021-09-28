@@ -3,22 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>potato-api</artifactId>
+        <artifactId>potato</artifactId>
         <groupId>com.potato</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>potato-api-sys</artifactId>
-
+    <artifactId>potato-modules</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>potato-modules-sys</module>
+    </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>com.potato</groupId>
-            <artifactId>potato-api-core</artifactId>
-        </dependency>
-    </dependencies>
+
 </project>

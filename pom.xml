@@ -11,7 +11,8 @@
 		<module>potato-config</module>
         <module>potato-register</module>
 		<module>potato-auth</module>
-	</modules>
+        <module>potato-modules</module>
+    </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -83,6 +84,16 @@
 			<dependency>
 				<groupId>com.potato</groupId>
 				<artifactId>datasource-spring-boot-stater</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.potato</groupId>
+				<artifactId>potato-api-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.potato</groupId>
+				<artifactId>potato-api-sys</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!-- 自定义 starter end-->
