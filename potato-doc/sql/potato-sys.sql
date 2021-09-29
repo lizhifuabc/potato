@@ -1,9 +1,4 @@
-drop database if exists potato_sys;
-create database  potato_sys default character set utf8mb4 collate utf8mb4_general_ci;
-set names utf8mb4;
-set foreign_key_checks = 0;
-
-use potato_sys;
+use potato_config;
 -- ----------------------------
 -- 用户信息
 -- ----------------------------

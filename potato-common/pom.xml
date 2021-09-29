@@ -18,6 +18,7 @@
         <module>feign-spring-boot-stater</module>
         <module>auth-spring-boot-stater</module>
         <module>potato-common-core</module>
+        <module>loadbalancer-spring-boot-starter</module>
     </modules>
     <packaging>pom</packaging>
 </project>

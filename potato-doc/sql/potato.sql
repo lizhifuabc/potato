@@ -1,4 +1,3 @@
-CREATE DATABASE IF NOT EXISTS potato_config DEFAULT CHARACTER SET = utf8;
 Use potato_config;
 -- ----------------------------
 -- 数据源
